@@ -51,11 +51,11 @@ directiveModule.directive('ngDropdownMultiselect', ['$filter', '$document', '$co
 
 			template += '<a ng-keydown="option.disabled || keyDownLink($event)" role="menuitem" class="option" tabindex="-1" ng-click="option.disabled || setSelectedItem(getPropertyForObject(option,settings.idProp), false, true)" ng-disabled="option.disabled" data-ng-class="{\'active\': isChecked(getPropertyForObject(option,settings.idProp))}">';
 
-			/*if (checkboxes) {
+			if (checkboxes) {
 				template += '<div class="checkbox"><label><input class="checkboxInput" type="checkbox" ng-click="checkboxClick($event, getPropertyForObject(option,settings.idProp))" ng-checked="isChecked(getPropertyForObject(option,settings.idProp))" /> <span mf-dropdown-static-include="{{settings.template}}"></div></label></span></a>';
 			} else {
 				template += '<span> </span> <span mf-dropdown-static-include="{{settings.template}}"></span></a>';
-			}*/
+			}
 
 			template += '</li>';
 
